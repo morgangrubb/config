@@ -1,0 +1,12 @@
+[user]
+	name = Morgan Grubb
+	email = morgan@wishpond.com
+[core]
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+[color]
+	ui = true
+	diff = auto
+	status = auto
+	branch = auto
+[diff "ruby"]
+  funcname = ^ *\\(\\(class\\|module\\|def\\) .*\\)

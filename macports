@@ -1,0 +1,14 @@
+# MacPorts paths
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export PATH=/usr/local/mysql/bin:$PATH
+
+# MacPorts I think
+. /sw/bin/init.sh
+
+# MacPorts Bash shell command completion
+if [ -f /opt/local/etc/bash_completion ]; then
+    . /opt/local/etc/bash_completion
+fi
+
+alias mysqlstart='sudo /opt/local/bin/mysqld_safe5 &'
+alias mysqlstop='/opt/local/bin/mysqladmin5 -u root -p shutdown'

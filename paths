@@ -1,0 +1,6 @@
+# Load self compiled stuff
+export PATH="/usr/local/bin:$PATH"
+
+
+
+

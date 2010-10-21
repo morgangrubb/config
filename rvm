@@ -1,0 +1,4 @@
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+PS1="\[\033[1;32;30m\]\$(~/.rvm/bin/rvm-prompt i v g) $PS1"
+
+# export PATH="$HOME/.rvm/bin:$PATH"

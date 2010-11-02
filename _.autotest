@@ -1,7 +1,9 @@
+require 'autotest/fsevent'
+
 module Autotest::Growl
 
   def self.growl(title, msg, img, pri = 0, stick = '')
-    system "growlnotify -n autotest –image #{img} -p #{pri} -m #{msg.inspect} #{title} #{stick}"
+    system "growlnotify --name autotest --image #{img} --priority #{pri} --message #{msg.inspect} #{title} #{stick}"
   end
 
   Autotest.add_hook :ran_command do |autotest|
@@ -10,9 +12,9 @@ module Autotest::Growl
     if output =~ /[1-9]\sfailures?/
       growl "Test Results", "#{output}", "~/projects/config/autotest/rails_fail.png"
     elsif output =~ /pending/
-      growl "Test Results", "#{output}", "~/projects/config/rails_pending.png"
+      growl "Test Results", "#{output}", "~/projects/config/autotest/rails_pending.png"
     else
-      growl "Test Results", "#{output}", "~/projects/config/rails_ok.png"
+      growl "Test Results", "#{output}", "~/projects/config/autotest/rails_ok.png"
     end
   end
 end
